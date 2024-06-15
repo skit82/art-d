@@ -1,0 +1,28 @@
+mixin reviews()
+
+  section.reviews&attributes(attributes)
+    .container
+      .reviews__wrapper
+        .reviews__title
+          h2.title.title--ld.reviews__name Отзывы наших клиентов о нас
+        .swiper.reviews__slider
+          .swiper-wrapper.reviews__slider-wrapper
+            .swiper-slide.reviews__slide
+              +reviews-card()
+            .swiper-slide.reviews__slide
+              +reviews-card()
+            .swiper-slide.reviews__slide
+              +reviews-card()
+            .swiper-slide.reviews__slide
+              +reviews-card()
+            .swiper-slide.reviews__slide
+              +reviews-card()
+            .swiper-slide.reviews__slide
+              +reviews-card()
+            .swiper-slide.reviews__slide
+              +reviews-card()
+            .swiper-slide.reviews__slide
+        .reviews__slider-bar
+          .swiper-scrollbar
+        .reviews__slider-controls
+          +slider-buttons(true)

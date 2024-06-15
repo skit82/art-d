@@ -1,0 +1,43 @@
+.reviews {
+  margin-bottom: 100px;
+  overflow: hidden;
+
+  .reviews__slide {
+    max-width: 740px;
+    margin-right: 60px;
+
+    @include vp-1539 {
+      max-width: 650px;
+      margin-right: 40px;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  &__slider {
+    grid-column: 1 / -1;
+    min-height: 100px;
+    margin-bottom: 40px;
+    max-width: calc(100% + 120px);
+  }
+
+  &__title {
+    max-width: 572px;
+
+    margin: 0 auto;
+    margin-bottom: 60px;
+  }
+
+  &__name {
+    color: $color-transport-black;
+    text-align: center;
+  }
+
+  &__slider-bar {
+    margin-bottom: 20px;
+    height: 2px;
+  }
+}

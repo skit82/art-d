@@ -1,5 +1,383 @@
 .footer {
-  padding: 40px 0;
+  // padding-top: 41px;
+  // padding-bottom: 15px;
 
-  background-color: $color-neon-blue;
+  background-color: $color-transport-black;
+  overflow: hidden;
+
+  @include vp-767 {
+    // padding-top: 21px;
+    // padding-bottom: 10px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    // flex-wrap: wrap;
+  }
+
+  &__section {
+
+    &--row-1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 60px 0;
+
+      @include vp-1023 {
+        padding: 40px 0;
+      }
+
+      @include vp-767 {
+        padding: 20px 0;
+      }
+
+      @include vp-639 {
+        flex-direction: column;
+      }
+    }
+
+    &--row-2 {
+      position: relative;
+
+      width: 100vw;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $color-default-white;
+      transform: translateX(-50.6%);
+    }
+
+
+    &--row-3 {
+      padding: 60px 0;
+
+      @include vp-1023 {
+        width: 100%;
+        padding: 40px 0;
+      }
+
+      @include vp-767 {
+        padding: 20px 0;
+      }
+    }
+  }
+
+  // &__box {
+    // display: flex;
+    // justify-content: space-between;
+
+    // max-width: 410px;
+    // width: 100%;
+
+    // @include vp-767 {
+      // max-width: 300px;
+      // width: 100%;
+    // }
+  // }
+
+  &__logo {
+    display: flex;
+    flex-shrink: 0;
+
+    @include vp-639 {
+      position: relative;
+      margin-bottom: 40px;
+    }
+
+    img {
+
+      @include vp-1023 {
+        width: 360px;
+      }
+
+      @include vp-767 {
+        width: 320px;
+      }
+    }
+  }
+
+  &__navigation-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: flex-start;
+
+    max-width: 921px;
+    width: 100%;
+    margin-left: 20px;
+    flex-wrap: wrap;
+
+    @include vp-767 {
+      justify-content: center;
+      margin-left: 0;
+    }
+  }
+
+  &__navigation-item {
+    margin-bottom: 15px;
+    padding-right: 120px;
+
+    span {
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 32px;
+      color: $color-blue-azure;
+      padding-right: 5px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-right: 0;
+
+      @include vp-767 {
+        padding-right: 16px;
+      }
+
+      @include vp-689 {
+        padding-right: 10px;
+      }
+    }
+
+    @include vp-1279 {
+      padding-right: 50px;
+    }
+
+    @include vp-1023 {
+      padding-right: 30px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 10px;
+      padding-right: 16px;
+      padding-left: 16px;
+    }
+
+    @include vp-689 {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+  }
+
+  &__navigation-link {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 32px;
+
+    color: $color-light-grey;
+    transition: color $trans-default, border-color $trans-default, opacity $trans-default;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        color: $color-blue-azure;      }
+    }
+
+    @include vp-1023 {
+      font-size: 22px;
+      line-height: 28px;
+    }
+
+    @include vp-767 {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &__sub-menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+    max-width: 1540px;
+    width: 100%;
+    min-height: 70px;
+
+    list-style: none;
+    padding: 0;
+    padding-left: 46px;
+    padding-right: 30px;
+    margin: 0 auto;
+  }
+
+  &__sub-menu-item {
+    &:not(:first-child)::before {
+      background: #e2e2e2;
+      content: "";
+      height: 52px;
+      // left: 0;
+      position: absolute;
+      top: 12px;
+      width: 2px;
+    }
+  }
+
+  &__sub-menu-link {
+    position: relative;
+    display: block;
+    padding: 22px 18px;
+    font-size: 22px;
+    font-weight: 500;
+    min-height: 70px;
+
+    color: $color-transport-black;
+    transition: color $trans-default, border-color $trans-default, opacity $trans-default;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        color: $color-blue-azure;      }
+    }
+  }
+
+  &__contact-descr {
+    p {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 30px;
+
+      color: $color-light-grey;
+
+      @include vp-767 {
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  &__contact-phone {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    // margin-bottom: 22px;
+
+    color: $color-light-grey;
+    transition: color $trans-default, border-color $trans-default, opacity $trans-default;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        color: $color-blue-azure;
+      }
+    }
+
+    &:not(:last-child) {
+      padding-right: 30px;
+    }
+
+    @include vp-1023 {
+      margin-right: 15px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 22px;
+      margin: 0;
+    }
+  }
+
+  &__contact-email {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+
+    color: $color-light-grey;
+    transition: color $trans-default, border-color $trans-default, opacity $trans-default;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        color: $color-blue-azure;
+      }
+    }
+
+    &:not(:last-child) {
+      padding-right: 30px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    justify-content: space-between;
+
+    @include vp-1023 {
+      display: flex;
+      width: auto;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    @include vp-767 {
+      flex-wrap: nowrap;
+    }
+
+    @include vp-639 {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @include vp-529 {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    p {
+      margin: 0;
+
+
+      @include vp-767 {
+
+      }
+    }
+  }
+
+  &__contact-descr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-right: 10px;
+
+    max-width: 615px;
+    width: 100%;
+
+    @include vp-1479 {
+      max-width: 415px;
+    }
+
+    @include vp-1023 {
+      max-width: 360px;
+      margin-bottom: 15px;
+    }
+
+    @include vp-767 {
+      max-width: 245px;
+    }
+
+    @include vp-639 {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__contact-icon svg {
+    flex-shrink: 0;
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+
+    @include vp-767 {
+      width: 36px;
+      height: 36px;
+      margin-right: 8px;
+    }
+  }
 }
