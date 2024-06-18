@@ -3,7 +3,7 @@ mixin reviews()
   section.reviews&attributes(attributes)
     .container
       .reviews__wrapper
-        .reviews__title
+        .reviews__title(data-animate-title="rotateX")
           h2.title.title--ld.reviews__name Отзывы наших клиентов о нас
         .swiper.reviews__slider
           .swiper-wrapper.reviews__slider-wrapper

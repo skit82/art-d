@@ -1,14 +1,63 @@
 .btn {
+  position: relative;
   display: inline-flex;
-  padding: 10px 20px;
+  padding: 5px 70px;
+  justify-content: center;
+
+  width: 260px;
+  min-height: 60px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 50px;
+  letter-spacing: -0.02em;
 
   color: $color-default-white;
+  overflow: hidden;
 
-  background-color: $color-neon-blue;
+  background-color: $color-blue-azure;
   border: none;
   cursor: pointer;
+  border-radius: 30px;
+  z-index: 1;
 
-  transition: opacity $trans-default;
+  transition: background-color $trans-default, color $trans-default, border-color $trans-default, opacity $trans-default;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+  }
+
+  &--1 {
+    background-color: $color-blue-azure;
+  }
+
+  &--1::before {
+    top: 0;
+    left: 0;
+
+    width: 200%;
+    height: 100%;
+
+    border-radius: 30px;
+
+    background: linear-gradient(44deg, $color-blue-azure, #92D1FF, $color-blue-azure);
+    transform: translateX(0%);
+
+    transition: transform 0.3s ease;
+  }
+
+  &--1 {
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover::before,
+      &:focus::before {
+        transform: translateX(-50%);
+        border-radius: 30px;
+      }
+    }
+  }
+
 
   &--red {
     background-color: $color-torch-red;
@@ -22,5 +71,316 @@
 
   @include hover-focus {
     opacity: 0.8;
+  }
+
+  &--azure {
+    color: $color-blue-azure;
+    background-color: $color-default-white;
+    border-color: $color-blue-azure;
+    border: 1px solid $color-blue-azure;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        color: $color-transport-black;
+        border-color: $color-transport-black;
+        background-color: transparent;
+      }
+    }
+  }
+
+  &--xl {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    padding: 17.5px 30px;
+    min-height: 60px;
+
+    @include vp-1023 {
+      padding: 10px 20px;
+      min-height: 40px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+    }
+  }
+
+  &--lg {
+    padding: 19px 29px;
+    min-height: 60px;
+
+    @include vp-1023 {
+      padding-top: 19px;
+    }
+
+    @include vp-767 {
+      min-height: 40px;
+      padding: 11px 20px;
+    }
+  }
+
+  &--arrow {
+    background-color: transparent;
+  }
+
+  &--bg {
+    padding: 20px 35px;
+    min-height: 60px;
+    min-width: 220px;
+
+    @include vp-1023 {
+      padding: 11px 22px;
+      min-height: 40px;
+    }
+
+    @include vp-767 {
+      padding: 11px 14px;
+      min-width: 154px;
+    }
+  }
+
+  &--sm {
+    min-height: 30px;
+    padding: 5px 9px;
+
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.05em;
+
+    @include vp-1023 {
+      padding-top: 6px;
+
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  &--white {
+    color: $color-burnt-orange;
+    background-color: $color-default-white;
+    border-color: $color-default-white;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        color: $color-default-white;
+        background-color: $color-burnt-orange;
+      }
+    }
+  }
+
+  &--green {
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        color: $color-mosque;
+      }
+    }
+  }
+
+  &--orange {
+    background-color: $color-burnt-orange;
+    border-color: $color-burnt-orange;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        color: $color-burnt-orange;
+      }
+    }
+  }
+
+  &--black {
+    background-color: $color-ebony;
+    border-color: $color-ebony;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        color: $color-ebony;
+      }
+    }
+  }
+
+  &--transparent {
+    background-color: transparent;
+    border-color: $color-shuttle-grey;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        color: $color-ebony;
+      }
+    }
+  }
+
+  &--white.btn--round {
+    background-color: $color-default-white;
+    border: none;
+
+    svg {
+      color: $color-ebony;
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        background-color: $color-default-white;
+        svg {
+          color: $color-ebony;
+        }
+      }
+    }
+  }
+
+  &--orange.btn--round {
+    border: none;
+    transition: none;
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        background-color: $color-burnt-orange;
+        svg {
+          color: $color-default-white;
+        }
+      }
+    }
+  }
+
+  &--transp-white {
+    background-color: $color-transparent;
+    border-color: rgba($color-default-white, 0.2);
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        background-color: $color-transparent;
+        color: rgba($color-default-white, 0.7);
+        border-color: $color-default-white;
+      }
+    }
+  }
+
+  &--hover-transp {
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        background-color: $color-transparent;
+      }
+    }
+  }
+
+  &--round {
+    padding: 0;
+    margin: 0;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    svg {
+      width: 18px;
+      height: 18px;
+
+      @include vp-1023 {
+        width: 16px;
+        height: 16px;
+      }
+
+      @include vp-767 {
+        width: 14px;
+        height: 14px;
+      }
+    }
+
+    @include vp-1023 {
+      width: 50px;
+      height: 50px;
+      padding: 0;
+    }
+
+    @include vp-767 {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &--icon-round {
+    padding: 0;
+    margin: 0;
+    width: 50px;
+    height: 50px;
+    min-height: 30px;
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+
+    border: 1px solid rgba($color-default-white, 0.2);
+    border-radius: 50%;
+
+    @include vp-1023 {
+      padding: 0;
+    }
+
+    @include vp-767 {
+      width: 40px;
+      height: 40px;
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+
+      @include vp-767 {
+        width: 10px;
+        height: 22px;
+      }
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        background-color: $color-transparent;
+      }
+    }
+  }
+
+  &--text {
+    text-align: center;
+    border-radius: 40px;
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 129%;
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        border-color: $color-default-white;
+      }
+    }
+  }
+
+  &--no-border {
+    border: none;
+  }
+
+  &--bordered {
+    color: $color-grey-chateau;
+    border: 1px solid $color-light-grey;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        color: rgba($color-ebony, 0.7);
+        border-color: rgba($color-ebony, 0.5);
+      }
+    }
   }
 }

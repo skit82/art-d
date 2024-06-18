@@ -1,0 +1,20 @@
+mixin feedback()
+  .feedback
+    .feedback__form(data-validate)
+      form(action="#", method="post", data-form="feedback-form")
+        .feedback__form-descr
+          .feedback__form-image
+            +picture("content", "form-img", "png", 720, 736, "Картинка")
+          .feedback__form-content
+            .feedback__form-box
+              .feedback__form-item
+                +custom-input({inputType: "text", inputName: "user-name", inputMinLength: "2", inputPlaceholder: "ФИО"})(required, autocomplete="off")
+              .feedback__form-item
+                +custom-input({inputType: "tel", inputName: "user-tel", inputPlaceholder: "Ваш телефон"})(required, autocomplete="off")
+              .feedback__form-item
+                +custom-input({inputType: "email", inputName: "user-email", inputPlaceholder: "Ваш email"})(required, autocomplete="off")
+              .feedback__form-item
+                +custom-textarea({inputName: "user-question", inputPlaceholder: "Ваш комментарий"})(required)
+            .feedback__content
+              .feedback__form-submit
+                +btn({text: "Отправить", type: "submit"}).feedback__form-btn

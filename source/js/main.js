@@ -6,6 +6,7 @@ import {ScrollTrigger} from './vendor/ScrollTrigger.min.js';
 import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import {initReviewsSlider} from './modules/init-reviews-slider';
+// import {initReviewsTitle} from './modules/init-reviews-title';
 
 // ---------------------------------
 
@@ -32,6 +33,7 @@ window.addEventListener('DOMContentLoaded', () => {
     window.form = form;
     form.init();
     initReviewsSlider();
+    // initReviewsTitle();
   });
 });
 

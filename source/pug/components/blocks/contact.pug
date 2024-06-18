@@ -1,0 +1,18 @@
+mixin contact()
+
+  section.contact
+    .container
+      .contact__wrapper
+        +feedback()
+        .contact__content
+          .contact__decor
+          .contact__title
+            h3.title.title--md Контакты:
+          .contact__descr
+            p тел:&nbsp;#[a(href="tel:+78000000000", class="contact__phone") 8 800 000 00 00]
+            p тел:&nbsp;#[a(href="tel:+78000000000", class="contact__phone") 8 800 000 00 00]
+          .contact__descr
+            p Email:&nbsp;#[a(href="malito:dsart@info.ru", class="contact__email", target="blank") dsart@info.ru]
+            p Email:&nbsp;#[a(href="malito:dsart@inbox.ru", class="contact__email", target="blank") dsart@inbox.ru]
+          .contact__social
+            p Мы в социальных сетях:

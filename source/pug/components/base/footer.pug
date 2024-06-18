@@ -2,6 +2,27 @@ mixin footer(footerMods)
   footer.footer(class=footerMods)
     .footer__wrapper
       .container
+        .footer__inner
+          .footer__section.footer__section--row-1
+            .footer__logo
+              +icon("icon-logo", 460, 80)
+            ul.footer__navigation-list.footer__navigation-list--row2
+              li.footer__navigation-item
+                a.footer__navigation-link(href="#", aria-label="Главная") Главная
+              li.footer__navigation-item
+                a.footer__navigation-link(href="#", aria-label="О нас") О нас
+              li.footer__navigation-item
+                a.footer__navigation-link(href="#", aria-label="Услуги") Услуги
+              li.footer__navigation-item
+                a.footer__navigation-link(href="#", aria-label="Цены") Цены
+              li.footer__navigation-item
+                a.footer__navigation-link(href="#", aria-label="Наши работы") Наши работы
+              li.footer__navigation-item
+                a.footer__navigation-link(href="#", aria-label="Партнерство") Партнерство
+              li.footer__navigation-item
+                a.footer__navigation-link(href="#", aria-label="Контакты") Контакты
+              li.footer__navigation-item
+                a.footer__navigation-link(href="#", aria-label="Блог") Блог
         .footer__copyright.copyright
           div.copyright__content
             p.copyright__text © 2024 WEBCODE | Все права защищены

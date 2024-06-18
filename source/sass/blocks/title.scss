@@ -1,0 +1,56 @@
+.title {
+  margin: 0;
+
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 80px;
+  color: $color-light-grey;
+
+  letter-spacing: -0.02em;
+
+  @include vp-1023 {
+    font-size: 45px;
+    line-height: 50px;
+  }
+
+  @include vp-767 {
+    font-size: 33px;
+    line-height: 39px;
+  }
+
+  &--black {
+    color: $color-transport-black;
+  }
+
+  &--ld {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 65px;
+
+    @include vp-1023 {
+      font-size: 40px;
+      line-height: 55px;
+    }
+
+    @include vp-767 {
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+
+  &--md {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 65px;
+
+    @include vp-1023 {
+      font-size: 30px;
+      line-height: 55px;
+    }
+
+    @include vp-767 {
+      font-size: 24px;
+      line-height: 37px;
+    }
+  }
+}
