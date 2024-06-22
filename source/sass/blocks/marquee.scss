@@ -10,7 +10,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    min-height: 240px;
+    min-height: 150px;
 
     @include vp-1023 {
       height: 350px;
@@ -38,7 +38,6 @@
     white-space: nowrap;
     // padding-left: 30px;
     margin: 0 35px;
-
   }
 
   &__text--reverse {

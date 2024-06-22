@@ -1,4 +1,4 @@
-export initReviewsTitle = () => {
+export initReviewsName = () => {
 
   const reviewsTitleBlok = reviewsTitleContainer.querySelector('.reviews__title');
 

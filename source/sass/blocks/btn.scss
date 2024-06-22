@@ -29,10 +29,6 @@
     z-index: -1;
   }
 
-  &--1 {
-    background-color: $color-blue-azure;
-  }
-
   &--1::before {
     top: 0;
     left: 0;
@@ -42,13 +38,15 @@
 
     border-radius: 30px;
 
-    background: linear-gradient(44deg, $color-blue-azure, #92D1FF, $color-blue-azure);
+    background: linear-gradient(44deg, $color-blue-azure, #92d1ff, $color-blue-azure);
     transform: translateX(0%);
 
     transition: transform 0.3s ease;
   }
 
   &--1 {
+    background-color: $color-blue-azure;
+
     @media (hover: hover), screen and (min-width: 0\0) {
       &:hover::before,
       &:focus::before {

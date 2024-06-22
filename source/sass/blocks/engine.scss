@@ -1,0 +1,23 @@
+.engine {
+  &__content {
+    display: flex;
+    margin-bottom: 70px;
+  }
+
+  &__title {
+    max-width: 560px;
+    margin-right: 10%;
+  }
+
+  &__text {
+    max-width: 630px;
+    margin-left: auto;
+
+    p {
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 32px;
+      color: $color-light-grey-2;
+    }
+  }
+}

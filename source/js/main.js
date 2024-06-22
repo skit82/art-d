@@ -7,7 +7,7 @@ import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import {initReviewsSlider} from './modules/init-reviews-slider';
 import {initMarquee} from './modules/init-marquee';
-// import {initReviewsTitle} from './modules/init-reviews-title';
+// import {initReviewsName} from './modules/init-reviews-title';
 
 // ---------------------------------
 
@@ -35,7 +35,7 @@ window.addEventListener('DOMContentLoaded', () => {
     form.init();
     initReviewsSlider();
     initMarquee();
-    // initReviewsTitle();
+    // initReviewsName();
   });
 });
 

@@ -5,7 +5,7 @@ mixin footer(footerMods)
         .footer__inner
           .footer__section.footer__section--row-1
             .footer__logo
-              +icon("icon-seo", 80, 80)
+              +icon("icon-logo", 461, 80, true)
             ul.footer__navigation-list.footer__navigation-list--row2
               li.footer__navigation-item
                 a.footer__navigation-link(href="#", aria-label="Главная") Главная
@@ -24,6 +24,6 @@ mixin footer(footerMods)
               li.footer__navigation-item
                 a.footer__navigation-link(href="#", aria-label="Блог") Блог
         .footer__copyright.copyright
-          div.copyright__content
+          .copyright__content
             p.copyright__text © 2024 WEBCODE | Все права защищены
             a.copyright__link(href="#", aria-label="Политика конфиденциальности") Политика конфиденциальности

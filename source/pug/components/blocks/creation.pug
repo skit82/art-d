@@ -1,0 +1,61 @@
+mixin creation()
+  -
+    const infoList = [
+      {
+        number: "1",
+        name: "Аналитика и&nbsp;прототипирование",
+        icon: "icon-analytics",
+        text: "На&nbsp;этапе планирования специалисты досконально изучают продукт или услугу заказчика. Анализируются конкуренты конкретной ниши, оценивается спрос, выявляется целевая аудитория ...",
+      },
+      {
+        number: "2",
+        name: "Уникальный дизайн и&nbsp;контент",
+        icon: "icon-content",
+        text: "Создание веб сайта&nbsp;&mdash; это ответственная работа дизайнеров. Специалисты проектируют внешний вид будущего ресурса, отталкиваясь от&nbsp;вашего фирменного стиля и&nbsp;пожеланий ...",
+      },
+      {
+        number: "3",
+        name: "Верстка и&nbsp;программирование",
+        icon: "icon-layout",
+        text: "При создании сайтов с&nbsp;нуля используются передовые методики, наиболее эффективные подходы. Таким способом достигается высокая ...",
+      },
+      {
+        number: "4",
+        name: "Адаптация под все устройства",
+        icon: "icon-adaption",
+        text: "В&nbsp;Москве, как и&nbsp;во&nbsp;всем мире, возрастает мобильный трафик. При разработке и&nbsp;продвижении сайта важно не&nbsp;упустить работу над ...",
+      },
+      {
+        number: "5",
+        name: "SEO оптимизация",
+        icon: "icon-seo",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua. Ut&nbsp;enim ad&nbsp;minim ...",
+      },
+      {
+        number: "6",
+        name: "Администрирование и&nbsp;поддержка сайта",
+        icon: "icon-support",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua. Ut&nbsp;enim ad&nbsp;minim ...",
+      },
+    ]
+
+  section.creation
+    .container
+      .creation__wrapper
+        .creation__title
+          h2.title.title--black.title--ld Создание и продвижение веб-сайта для вашего бизнеса
+        .creation__content-text
+          p В&nbsp;цифровизированном мире, когда передовые технологии чрезвычайно важны для бизнеса, наличие функционального и&nbsp;прибыльного веб-сайта&nbsp;&mdash; абсолютная необходимость. Ведь это визитная карточка вашей компании, ее&nbsp;статус в онлайн-пространстве.
+          p Создание сайта под продвижение позволит не&nbsp;только преподнести информацию пользователю. Своя онлайн-площадка станет мощным инструментом для увеличения клиентской базы. Это произойдет в&nbsp;том случае, если задачу создания сайта и&nbsp;seo продвижения передать в&nbsp;руки профессионалам.
+          p При создании и&nbsp;продвижении сайтов веб студия WEB-COD придерживается принципов:
+        ul.creation__list
+          each item in infoList
+            li.creation__item
+              .creation__top
+                .creation__name
+                  span !{item.number}
+                  h2 !{item.name}
+                .creation__icon
+                  +icon(item.icon, 80,80)
+              .creation__text
+                p !{item.text}
