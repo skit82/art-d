@@ -3,6 +3,11 @@
   padding-bottom: 50px;
   padding-top: 50px;
 }
+
+.sitemap__img {
+  background-color: #000000;
+}
+
 .sitemap h1 {
   color: #2c39f2;
   font-size: 22px;

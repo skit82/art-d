@@ -1,0 +1,212 @@
+.our-services {
+  overflow: hidden;
+  margin-bottom: 100px;
+  position: relative;
+
+  @include vp-1023 {
+    margin-bottom: 50px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 25px;
+  }
+
+  &__name {
+
+    max-width: 500px;
+    margin-bottom: 60px;
+
+    @include vp-767 {
+      margin-bottom: 20px;
+    }
+
+    span {
+      position: relative;
+      padding: 78px 0;
+      background-color: $color-transport-black;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    content: "";
+    width: 50%;
+    min-height: 131px;
+    left: 0;
+    background: #1e1e1e;
+    z-index: -1;
+    overflow: hidden;
+
+    @include vp-1023 {
+      width: calc(100% - 50%);
+      min-height: 111px;
+    }
+
+    @include vp-767 {
+      width: calc(100% - 50%);
+      min-height: 92px;
+    }
+
+    @include vp-449 {
+      width: calc(100% - 80px);
+      min-height: 92px;
+    }
+  }
+
+  &__title {
+    padding: 33px 0;
+
+    @include vp-1023 {
+      padding: 28px 0;
+    }
+
+    @include vp-767 {
+      padding: 26px 0;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+    row-gap: 45px;
+    padding: 25px 0;
+
+    @include vp-1023 {
+      column-gap: 40px;
+      row-gap: 30px;
+    }
+
+    @include vp-899 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__caption--title {
+    transition: background-color $trans-default, color $trans-default, border-color $trans-default, opacity $trans-default;
+  }
+
+  &__box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+    border-radius: 10px;
+    // background-color: $color-default-white;
+    transition: background-color $trans-1200, color $trans-1200, border-color $trans-1200, opacity $trans-1200;
+    border: 1px solid $color-light-grey;
+    box-shadow: 0px 5px 15px 0px rgb(0 0 0 / 10%);
+
+    @include vp-767 {
+      padding: 20px 15px;
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        background-color: $color-transport-black;
+        // cursor: pointer;
+
+        .our-services__caption--title {
+          color: $color-default-white;
+        }
+
+        .our-services__cost p {
+          color: $color-default-white;
+        }
+      }
+    }
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__caption {
+    margin-bottom: 6px;
+  }
+
+  &__text {
+    // margin-top: auto;
+      margin-bottom: 25px;
+
+    p {
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 32px;
+      padding-right: 5px;
+
+      margin: 0;
+      color: $color-light-grey-2;
+
+      @include vp-1023 {
+        font-size: 20px;
+        line-height: 30px;
+      }
+
+      @include vp-767 {
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+  }
+
+
+  &__cost {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: auto;
+
+    @include vp-449 {
+        justify-content: center;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 65px;
+      letter-spacing: -0.02em;
+      color: $color-transport-black;
+      margin: 0;
+      transition: background-color $trans-default, color $trans-default, border-color $trans-default, opacity $trans-default;
+
+      @include vp-1023 {
+        font-size: 25px;
+        line-height: 60px;
+        margin-bottom: 0;
+      }
+
+      @include vp-767 {
+        font-size: 20px;
+        line-height: 55px;
+      }
+    }
+  }
+
+  &__btn {
+    margin-left: 10px;
+    padding: 4px 55px;
+    width: 230px;
+
+    transition: background-color $trans-default, color $trans-default, border-color $trans-default, opacity $trans-default;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        background-color: $color-blue-azure;
+        color: $color-default-white;
+        cursor: pointer;
+      }
+    }
+
+    @include vp-449 {
+      width: 100%;
+    }
+  }
+}
